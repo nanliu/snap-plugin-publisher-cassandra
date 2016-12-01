@@ -35,7 +35,7 @@ deploy:
 - provider: s3
   access_key_id: AKIAINMB43VSSPFZISAA
   secret_access_key:
-    secure: bmCVcTXl+kIgSqAyW4+KxCVu0cxP7R+FFpnm2xFC7Jz/T9qIML6imKW8z6fLr4u6qJAaQ04frrl5aB3lAwkJOPdKLvOgpWW59DSqczTsR7rIOxCmFbyZIkrtf72U8ozCQZa9SHMLrILS+8YVEvihJJp+AHJmyJKnXiP2opyrS03/iUnAYFMRv7YLG8tWutQsVYuom6mphJuXyp94Fw2Q+UpGxj6IGNi/lHW5y74Q4x0UYmTN92SbZnukxOyXGrpkfMch7cX3F2wxT74xbovKg9EYiiE0G0NjPZXkBVBlStKm8oqxrVE+LgxUiKak3iQ59RfCfgYQXrvdj/bShRnyZCUXfGxbsbzwcA/7IGSbIckU3hiAQY/TNCXV7Kft835FEtkKYmdCiDwhkJXk5H3Yach5C7DD05CXS513KLjAq7KLAWT/XUsOO5nnJ781ThH1XzZZyAfDkrhqfbTp7HMHOnAAOG32ho0SSWC6E8gVv3R72XBiFhGRY5M6wk9G99NPuDYLnu7Nk0I2/3R0KnyBZ/1lXkoxqzCu8W2ws+ZaibgeREaW8z9MOUZ+Nl1hKvcLCnRJx3ajtk+2Wp3bvlZYSLqSYzwOZJTOqiaSZ/qCJoXCiG4deDNqoqPnoE7tVPj0vWATmnl8Vmr4EHorcJTUpDiKsXyO81qje5nADJvA05c=
+    secure: Ufa1xADxI24ANWRmtoRx7Z0e5ijYhwDHLuCyrTEy5KLlMsIvRzG+4+zLDk061M9dK0bhsfbqwGA2juT7T5ZMv4DbURAr5j9hvWqJgpJ9aNNcC0YMUSbc40QyRtRtcEWV/Zsgk+NOhC/ysdC43L6p8pZN4xaC3Ez+yDk5+ZhRMk713nZZu6mvl+F7jUz8iHsK1r7zGGoQzK3qCug6FXFHO+C56nFbSYKj/21H9jqgqPyw0l3MSyURjT8Q0C0Zw3u3T2yQxpGf9S7MUPGkLQQzUXLN/SBlDuHfi/9HiS9zFGI+i2sAQstYmSorHjI3VqmuzEpPNx8jiSMHBcEvPeRqBvJKxlQo56dmsvsheUL139Py8d7i6CUmMCLwMlZfbPX8FvtGvBpk+ieb7kOfikDUxYsi5ML9MXV7x+eYfZPB9UWRecHPW3P0OEFLFq3OSqRmmv1uUHD2TbbWVqpUT5AvhAXjnhCm3HRahA2AHfmSEZSBdATUgGfQ2mPKQbASitAxevbpahX7ovms7dIGEYhrP7xJvPHO9i9ASHSSyNkc/jLQeNK2sXYm9VyvPJcW+DBkzY3cPzq273uFASYTbbSZWTkLOD5tS60i8PjqgHXOKFs2Qc4crAvlBYRKYTz+mQfjJ8uIEEOqIQEoUpy/5SpFrt65vG7sBzWU6qMEUo3EooY=
   bucket: snap.ci.snap-telemetry.io
   region: us-west-2
   skip_cleanup: true
@@ -43,13 +43,12 @@ deploy:
   upload-dir: plugins
   acl: public_read
   on:
-    repo: intelsdi-x/snap-plugin-publisher-cassandra
-    branch: master
+    repo: nanliu/snap-plugin-publisher-cassandra
     condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.3"
 - provider: s3
   access_key_id: AKIAINMB43VSSPFZISAA
   secret_access_key:
-    secure: bmCVcTXl+kIgSqAyW4+KxCVu0cxP7R+FFpnm2xFC7Jz/T9qIML6imKW8z6fLr4u6qJAaQ04frrl5aB3lAwkJOPdKLvOgpWW59DSqczTsR7rIOxCmFbyZIkrtf72U8ozCQZa9SHMLrILS+8YVEvihJJp+AHJmyJKnXiP2opyrS03/iUnAYFMRv7YLG8tWutQsVYuom6mphJuXyp94Fw2Q+UpGxj6IGNi/lHW5y74Q4x0UYmTN92SbZnukxOyXGrpkfMch7cX3F2wxT74xbovKg9EYiiE0G0NjPZXkBVBlStKm8oqxrVE+LgxUiKak3iQ59RfCfgYQXrvdj/bShRnyZCUXfGxbsbzwcA/7IGSbIckU3hiAQY/TNCXV7Kft835FEtkKYmdCiDwhkJXk5H3Yach5C7DD05CXS513KLjAq7KLAWT/XUsOO5nnJ781ThH1XzZZyAfDkrhqfbTp7HMHOnAAOG32ho0SSWC6E8gVv3R72XBiFhGRY5M6wk9G99NPuDYLnu7Nk0I2/3R0KnyBZ/1lXkoxqzCu8W2ws+ZaibgeREaW8z9MOUZ+Nl1hKvcLCnRJx3ajtk+2Wp3bvlZYSLqSYzwOZJTOqiaSZ/qCJoXCiG4deDNqoqPnoE7tVPj0vWATmnl8Vmr4EHorcJTUpDiKsXyO81qje5nADJvA05c=
+    secure: Ufa1xADxI24ANWRmtoRx7Z0e5ijYhwDHLuCyrTEy5KLlMsIvRzG+4+zLDk061M9dK0bhsfbqwGA2juT7T5ZMv4DbURAr5j9hvWqJgpJ9aNNcC0YMUSbc40QyRtRtcEWV/Zsgk+NOhC/ysdC43L6p8pZN4xaC3Ez+yDk5+ZhRMk713nZZu6mvl+F7jUz8iHsK1r7zGGoQzK3qCug6FXFHO+C56nFbSYKj/21H9jqgqPyw0l3MSyURjT8Q0C0Zw3u3T2yQxpGf9S7MUPGkLQQzUXLN/SBlDuHfi/9HiS9zFGI+i2sAQstYmSorHjI3VqmuzEpPNx8jiSMHBcEvPeRqBvJKxlQo56dmsvsheUL139Py8d7i6CUmMCLwMlZfbPX8FvtGvBpk+ieb7kOfikDUxYsi5ML9MXV7x+eYfZPB9UWRecHPW3P0OEFLFq3OSqRmmv1uUHD2TbbWVqpUT5AvhAXjnhCm3HRahA2AHfmSEZSBdATUgGfQ2mPKQbASitAxevbpahX7ovms7dIGEYhrP7xJvPHO9i9ASHSSyNkc/jLQeNK2sXYm9VyvPJcW+DBkzY3cPzq273uFASYTbbSZWTkLOD5tS60i8PjqgHXOKFs2Qc4crAvlBYRKYTz+mQfjJ8uIEEOqIQEoUpy/5SpFrt65vG7sBzWU6qMEUo3EooY=
   bucket: snap.ci.snap-telemetry.io
   region: us-west-2
   skip_cleanup: true
@@ -57,16 +56,16 @@ deploy:
   upload-dir: plugins
   acl: public_read
   on:
-    repo: intelsdi-x/snap-plugin-publisher-cassandra
+    repo: nanliu/snap-plugin-publisher-cassandra
     tags: true
     condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.3"
 - provider: releases
   api_key:
-    secure: SkmG5RUr7HlfrI/VA8HufEBJKkZ/3fkeCSjHJVCjkaPgBWQShUJ38r2Zf2xOAwZb0cNsxc6pHsMF7RuVQovhN/DDYGo5GuhHG/mCjxOVy8b8j2w2+MBdq7L1Mxkye0giobATkjXzwGuCxxX/RVUnnL5skMtSEQqOv4m8wq1YGU6Trq1XYUT2/hKCAA6JPkNlNE1IIGWDgan6b3BcXgfMYKh0vzN6BETg4Wh9RmUksnsyG1xQ4TsUtz6JinQ0IPOHDxKdq4Ik6xUxKO/wDi7QPaxfFaqXHPqOEfuVouJfSOm1SN0tuj5JUrkVBT8D/HLrBUXieADJ/3mUs0ndQQyitOmw+AkTmh+OPumSpWk3X+BVUo7qyddl3YLuEaY524C7C4yfr2hkis81+G8xAx06hskel/CEK0mxZUgg5vNLtjWm1Caz69XG39G0+hcKnVIDIdUik/KU30lrlS+8f1JeQCN4BUFfO0BLEyxhJIPjV/MD7bUDJHVM1bsHFsAFQOW28mlpA3CVqPhhJUCAGXKJeY1e7ZzvvA65qU2f2OHGP0p0sdusvQaifnQP3c11D2yMVH9krQAGrMdcQR4F5HTBddkauS5PaM2OORt4R5HKuWlvBNR914Mj6HwCb/HcwYh0hWyrmMhzWt9dcFLRh/GgnLKonKio9RJN542BhyD5v6A=
+    secure: seEP9cKGbJ5F1Dpfso764IbZ3LSBc+aZ9PnL8bvlKsrEM7YLMoilRakBkeMEOYgA7H5HG5MpYC95EzFSfCAKg2zpdlNqyG9mV9+f2draltWb6wVEFo8+21h+IEGHP+dxoTBPbrploX2hyEQ9y4PD2IhJ5qumrADezSxT/YuIdMTEaTy8UlK92bLJLJhyBgN7MGS+vh9pJkftD+rDSi8DYoQqJt/T+4joCh7rRrSoHPsJt1EMI4GLyn14zI5NFr/Ip+YkXh80Ibg0bB1uKZ6+vQpINx/71GLmngBZbdkM0poH4l0cdGaifC61OEx14iNbgXCBMGmgqH5Dgxkx1XvJtNieScplTleYjXXqdXztvjYqHqX6xiEhlpER1bU/0Y/D52Ni8s7CzU0L3MAf0zP3VNKFQV5E58i0o7xbuUPHEyCizd+3c0RBFGU1sMKnGMtFIIWelsY2BqCLxhRt0XfkceQg70ZCHptPvrpVgLiMMy7QZON/+SEo4z6LDTJRXNjPhlEl7A4fKWPezxIhxKlhSCeVB8S54JGztz7emfz6ATUbHLIzNdaqdPbblCkQ+ckR8et6uuH0ILD1im83jvklpYqzBPZVYi+WxyD6Xrir80+nN8iuP1P0/0IuW1qc7KmnPoc+UBQB78IT+xYC4JjyAECBr8OgoWSBKq4y7OeNVSU=
   file:
     - release/snap-plugin-publisher-cassandra_linux_x86_64
   skip_cleanup: true
   on:
-    repo: intelsdi-x/snap-plugin-publisher-cassandra
+    repo: nanliu/snap-plugin-publisher-cassandra
     tags: true
     condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.3"
