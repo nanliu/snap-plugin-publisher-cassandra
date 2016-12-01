@@ -9,7 +9,7 @@ services:
 env:
   global:
   - ORG_PATH=/home/travis/gopath/src/github.com/intelsdi-x
-  - SNAP_PLUGIN_SOURCE=/home/travis/gopath/src/github.com/${TRAVIS_REPO_SLUG}
+  - SNAP_PLUGIN_SOURCE=/home/travis/gopath/src/github.com/intelsdi-x/snap-plugin-publisher-cassandra
   matrix:
   - TEST_TYPE=small
   - TEST_TYPE=medium
